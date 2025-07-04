@@ -21,7 +21,7 @@ export default function Services() {
   ];
   return (
     <div className="w-full relative p-4 py-12 md:py-16 lg:py-28 md:px-[10%] bg-cover bg-no-repeat bg-lightMain1 false">
-      <img
+      <Image
         alt=""
         loading="lazy"
         width="500"
@@ -30,21 +30,13 @@ export default function Services() {
         className="absolute bottom-0 right-0 scale-x-[-1] z-[1] hidden md:flex md:max-h-[150px] md:max-w-[100px] lg:max-h-[250px] lg:max-w-[150px] xl:max-w-[200px] xl:max-h-[300px] xl:right-[5%]"
         src="/plant.png"
         style={{ color: "transparent" }}
-      ></img>
+      ></Image>
       <h2 className="font-bold mb-2 text-4xl md:text-5xl xl:text-6xl text-[#1E4145] pb-4 gap-2 md:gap-4 text-center !block md:text-left md:mb-12">
         How I Help
       </h2>
 
       <div data-orientation="horizontal" className="w-full ">
-        <div
-          data-state="active"
-          data-orientation="horizontal"
-          role="tabpanel"
-          aria-labelledby="radix-:rb:-trigger-Therapies"
-          id="radix-:rb:-content-Therapies"
-          tabIndex={0}
-          className="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 duration-[0]"
-        >
+        <div className="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 duration-[0]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto min-w-full">
             {services.map((service) => (
               <div className="flex" key={service.title}>
