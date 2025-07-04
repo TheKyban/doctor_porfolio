@@ -112,6 +112,10 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* @theme {
+  --color-darkMain1: #b5dbdf;
+} */
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
