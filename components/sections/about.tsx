@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <section
@@ -31,7 +33,9 @@ export default function About() {
                 >
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                 </svg>
-                <a href="/#testimonials">Top Rated | 40+ Years Experience</a>
+                <Link href="#testimonials">
+                  Top Rated | 40+ Years Experience
+                </Link>
               </div>
             </div>
           </div>
@@ -42,7 +46,7 @@ export default function About() {
             Richmond, VA
           </h2>
           <p className="text-4xl font-bold text-[#1E4145] lg:text-5xl">
-            Hi I'm<span className=""> Ellie Shumaker</span>
+            Hi I&apos;m<span className=""> Ellie Shumaker</span>
           </p>{" "}
           <p className="mt-4 !leading-relaxed text-[#1E4145] text-lg md:text-xl lg:text-2xl font-medium font-para lg:line-clamp-6 xl:line-clamp-none">
             With over <strong>40 years of dedicated experience</strong> in
@@ -57,12 +61,12 @@ export default function About() {
             <strong>spiritual growth</strong>, the{" "}
             <strong>deepening of relationships</strong>, and a greater sense of{" "}
             <strong>inner peace</strong>. I am passionate about helping clients
-            grow in their capacity to love and in their trust for God's love for
-            them.
+            grow in their capacity to love and in their trust for God&apos;s
+            love for them.
           </p>{" "}
           <p className="mt-4 !leading-relaxed text-[#1E4145] text-lg md:text-xl lg:text-2xl font-medium font-para lg:line-clamp-6 xl:line-clamp-none">
             Whether you are seeking to heal from <strong>past wounds</strong>,
-            discover your <strong>life's purpose</strong>, or prepare for
+            discover your <strong>life&apos;s purpose</strong>, or prepare for
             Heaven, I offer a supportive space to explore these profound areas
             of life. Together, we can work towards achieving your goals for a
             more fulfilling and purposeful existence.

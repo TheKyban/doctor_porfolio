@@ -117,7 +117,7 @@ export default function Contact() {
               />
               <FormField
                 control={form.control}
-                name="phone"
+                name="message"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-[#144133]">
