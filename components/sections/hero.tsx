@@ -87,15 +87,11 @@ export default function Hero() {
         </div>
         <a target="__blank" className="mt-4 block w-fit mx-auto" href="/book">
           <button
-            className="
-  group relative inline-flex h-11 p-6 items-center justify-center 
-  cursor-pointer rounded-xl border-0 font-medium text-lg text-blue-900 
-  transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
+            className="group relative inline-flex h-11 p-6 items-center justify-center cursor-pointer rounded-xl border-0 font-medium text-lg ext-blue-900 
+  outline-0 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
   disabled:pointer-events-none disabled:opacity-50 
   bg-[length:200%]
   bg-[linear-gradient(#fff,#fff),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,#FF4D4D,#D6FF4D,#4DA6FF,#4DFFE5,#BF4DFF)]
-  [background-clip:padding-box,border-box,border-box] 
-  [background-origin:border-box] 
   [border:calc(0.08*1rem)_solid_transparent]
   before:absolute before:bottom-[-20%] before:left-1/2 before:z-0 
   before:h-1/5 before:w-3/5 before:-translate-x-1/2 
@@ -103,6 +99,7 @@ export default function Hero() {
   before:bg-[linear-gradient(90deg,#FF4D4D,#D6FF4D,#4DA6FF,#4DFFE5,#BF4DFF)]
   before:bg-[length:200%]
   before:[filter:blur(calc(0.8*1rem))]
+  text-blue-900
 "
           >
             <svg

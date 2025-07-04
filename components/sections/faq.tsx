@@ -34,12 +34,7 @@ export default function FAQ() {
         Frequently Asked Questions
       </p>
 
-      <Accordion
-        type="single"
-        collapsible
-        className="w-full"
-        defaultValue="item-1"
-      >
+      <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, idx) => (
           <AccordionItem
             key={idx}

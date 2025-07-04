@@ -20,7 +20,10 @@ export default function Services() {
     },
   ];
   return (
-    <div className="w-full relative p-4 py-12 md:py-16 lg:py-28 md:px-[10%] bg-cover bg-no-repeat bg-lightMain1 false">
+    <div
+      className="w-full relative p-4 py-12 md:py-16 lg:py-28 md:px-[10%] bg-cover bg-no-repeat bg-lightMain1 false"
+      id="services"
+    >
       <Image
         alt=""
         loading="lazy"
