@@ -1,4 +1,5 @@
 import About from "@/components/sections/about";
+import { AsSeenOn } from "@/components/sections/asSeenOn";
 import Contact from "@/components/sections/contact";
 import FAQ from "@/components/sections/faq";
 import Hero from "@/components/sections/hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Services />
       <Schedule />
       <About />
+      <AsSeenOn />
       <FAQ />
       <Contact />
     </div>
