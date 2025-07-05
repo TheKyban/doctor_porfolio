@@ -1,4 +1,4 @@
-import { Menu, Sparkle, Sparkles } from "lucide-react";
+import { Menu, Sparkles } from "lucide-react";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import Link from "next/link";
