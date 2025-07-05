@@ -8,19 +8,23 @@ import {
 const faqs = [
   {
     q: "What are your fees?",
-    a: "My fees are <strong>$60 for individual, $90 for couple</strong>",
+    a: "My fees are <strong>$200 for individual, $240 for couple</strong>",
   },
   {
     q: "Do you take insurance?",
-    a: "No, I do not take insurance directly. However, I can provide you with a  <strong>billing sheet</strong> with the necessary facts and codes so you can file for <strong>out-of-network benefits</strong> with your     insurance company.",
+    a: "No, but a superbill is provided for self-submission.",
   },
   {
-    q: "Do you provide online counseling?",
-    a: "No, I do not provide online counseling.",
+    q: "Are online sessions available?",
+    a: "Yes—all virtual sessions via Zoom.",
+  },
+  {
+    q: "What is your cancellation policy?",
+    a: "24-hour notice required.",
   },
   {
     q: "What are your office hours?",
-    a: "My office hours are <strong>Monday through Thursday, 11:00 AM to 6:30 PM</strong>.",
+    a: "My office hours are <strong>Tue & Thu, 10 AM–6 PM</strong>.",
   },
 ];
 

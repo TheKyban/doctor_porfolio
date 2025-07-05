@@ -6,13 +6,13 @@ export function Schedule() {
           Schedule A Consultation
         </p>
         <p className="font-bold text-lg lg:text-lg xl:text-xl text-[#B5DBDF] relative text-center">
-          Ellie Shumaker is currently accepting new clients. Availabile for
+          Dr. Serena Blake is currently accepting new clients. Availabile for
           online and in-person sessions.
         </p>
         <div className="flex gap-2 flex-col items-center justify-self-center">
-          <a href="/book">
+          <a href="#contact">
             <span className="sr-only">
-              Call and book appointment with Ellie Shumaker
+              Call and book appointment with Dr. Serena Blake
             </span>
             <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 text-md lg:text-lg lg:p-6 bg-transparent border-2 text-[#B5DBDF] border-[#F5F7FA] hover:bg-[#F5F7FA] hover:text-[#1E4145]">
               <svg

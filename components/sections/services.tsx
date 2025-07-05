@@ -4,17 +4,26 @@ import Link from "next/link";
 export default function Services() {
   const services = [
     {
-      title: "Christian Individual Counseling in Richmond, VA",
-      description: "Discover Peace, Purpose, and God's Truth in Richmond, VA.",
-      image: "/service1.webp",
+      title: "Anxiety & Stress Management",
+      description:
+        "I help clients manage anxiety and stress using mindfulness and cognitive-behavioral strategies. Together, we work to restore calm and build lasting emotional balance.",
+      image: "/anxity.avif",
       alt: "Christian Individual Counseling in Richmond, VA",
       sr: "Learn more about Christian Individual Counseling in Richmond, VA",
     },
     {
-      title: "Christian Couples Counseling in Richmond, VA",
+      title: "Relationship Counseling",
       description:
-        "Heal Your Relationship, Grow Closer to God Together in Richmond.",
-      image: "/service2.webp",
+        "Whether you're facing conflict or emotional distance, I offer a supportive space to rebuild connection. My approach strengthens communication and fosters deeper, healthier relationships.",
+      image: "/couple.jpg",
+      alt: "Christian Couples Counseling in Richmond, VA",
+      sr: "Learn more about Christian Couples Counseling in Richmond, VA",
+    },
+    {
+      title: "Trauma Recovery",
+      description:
+        "Healing from trauma takes time and compassionate guidance. I help clients safely process their experiences and move forward with resilience and hope.",
+      image: "/trauma.jpg",
       alt: "Christian Couples Counseling in Richmond, VA",
       sr: "Learn more about Christian Couples Counseling in Richmond, VA",
     },

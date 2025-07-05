@@ -16,12 +16,19 @@ import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
+import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
   email: z.string().email().min(5).max(50),
   phone: z.string().min(10).max(15).regex(/^\d+$/),
   message: z.string().min(5).max(500),
+  preferredTime: z.string().min(2).max(100),
+  agreeToContact: z.boolean().refine((val) => val === true, {
+    message: "You must agree to be contacted.",
+  }),
   captchaToken: z.string().min(1, { message: "Captcha is required" }),
 });
 
@@ -33,6 +40,8 @@ export default function Contact() {
       email: "",
       message: "",
       phone: "",
+      preferredTime: "",
+      agreeToContact: false,
     },
   });
 
@@ -40,6 +49,8 @@ export default function Contact() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    toast("Thank You For Contact 🙏");
+    form.reset();
   }
 
   return (
@@ -121,11 +132,51 @@ export default function Contact() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-sm font-medium text-[#144133]">
-                      Message
+                      What brings you here?
                     </FormLabel>
                     <FormControl>
                       <Textarea placeholder="" {...field} />
                     </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="preferredTime"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-[#144133]">
+                      Preferred time to reach you
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="e.g. Weekdays after 3 PM"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="agreeToContact"
+                render={({ field }) => (
+                  <FormItem className="flex items-center space-x-2">
+                    <FormControl>
+                      <Input
+                        type="checkbox"
+                        checked={field.value}
+                        onChange={field.onChange}
+                        className="w-4 h-4 border-gray-300 text-[#1E4145] focus:ring-[#1E4145]"
+                      />
+                    </FormControl>
+                    <FormLabel className="text-sm font-medium text-[#144133] m-0">
+                      I agree to be contacted
+                    </FormLabel>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -172,60 +223,49 @@ function Location() {
         <h3 className="text-3xl md:text-4xl font-semibold text-[#1E4145] mb-2">
           Our Office
         </h3>
-        <p className="text-xl text-[#1E4145] font-para">4913 Fitzhugh Avenue</p>
-        <p className="text-xl text-[#1E4145] font-para"> Suite 102</p>
-        <p className="text-xl text-[#1E4145] font-para"> Richmond</p>
-        <p className="text-xl text-[#1E4145] font-para"> VA 23230</p>
-        <p className="text-xl text-[#1E4145] font-para mb-2">Richmond, VA</p>
-        <a
+        <p className="text-xl text-[#1E4145]">1287 Maplewood Drive</p>
+        <p className="text-xl text-[#1E4145]"> Los Angeles</p>
+        <p className="text-xl text-[#1E4145] mb-2"> CA 90026</p>
+        <Link
           className="font-para p-2 bg-[#1E4145] text-[#B5DBDF] rounded"
           href="/google-maps"
         >
           Google Maps
-        </a>
+        </Link>
       </div>
       <div className="">
         <h3 className="text-3xl md:text-4xl font-semibold text-[#1E4145] mb-2">
           Hours
         </h3>
         <p className="text-xl text-[#1E4145] font-para">
-          Monday: 12:00 PM - 8:00 PM
+          In-person: Tue & Thu, 10 AM–6 PM
         </p>
         <p className="text-xl text-[#1E4145] font-para">
-          Tuesday: 12:00 PM - 8:00 PM
-        </p>
-        <p className="text-xl text-[#1E4145] font-para">
-          Wednesday: 9:00 AM - 6:00 PM
+          Virtual via Zoom: Mon, Wed & Fri, 1 PM–5 PM
         </p>
       </div>
-      <div className="">
+      <div className="flex flex-col items-center md:items-start">
         <h3 className="text-3xl md:text-4xl font-semibold text-[#1E4145] mb-2">
           Contact
         </h3>
-        <a
+        <Link
           className="text-blue-500 text-xl hover:text-blue-600 inline-block font-para"
-          href="tel:(757) 474-5262"
+          href="tel:(323) 555-0192"
         >
           <p className=" text-[#1E4145] hover:text-neutral-900  flex gap-2 items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-phone-call"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              <path d="M14.05 2a9 9 0 0 1 8 7.94"></path>
-              <path d="M14.05 6A5 5 0 0 1 18 10"></path>
-            </svg>
-            (757) 474-5262
+            <Phone className="w-4 h-4" />
+            (323) 555-0192
           </p>
-        </a>
+        </Link>
+        <Link
+          className="text-blue-500 text-xl hover:text-blue-600 inline-block font-para"
+          href="mail:serena@blakepsychology.com"
+        >
+          <p className=" text-[#1E4145] hover:text-neutral-900  flex gap-2 items-center">
+            <Mail className="w-4 h-4" />
+            serena@blakepsychology.com
+          </p>
+        </Link>
       </div>
     </div>
   );

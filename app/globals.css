@@ -112,6 +112,13 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+.tabular-nums {
+  --tw-numeric-spacing: tabular-nums;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero)
+    var(--tw-numeric-figure) var(--tw-numeric-spacing)
+    var(--tw-numeric-fraction);
+}
+
 @keyframes rainbow-shift {
   0% {
     background-position: 0% 50%;

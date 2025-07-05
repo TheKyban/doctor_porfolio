@@ -1,4 +1,10 @@
-import { CompassIcon, HeartHandshakeIcon, HeartIcon } from "lucide-react";
+import {
+  CompassIcon,
+  HeartHandshakeIcon,
+  HeartIcon,
+  Sparkles,
+  Star,
+} from "lucide-react";
 
 export default function Hero() {
   return (
@@ -15,14 +21,14 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#000]/30 z-10"></div>
       <div className="relative z-20 text-center px-4 md:px-[10%] max-w-screen-2xl">
         <h1 className="text-[#F5F7FA]/80 text-sm mb-3">
-          Christian Counseling Services in Richmond &amp; Central Virginia
+          Faith-Based Therapy in Los Angeles, CA
         </h1>
         <span className="font-para font-extrabold text-3xl md:text-4xl text-[#F5F7FA] py-2 pb-1 md:py-4 md:gap-4 text-center">
-          Professional Counseling for Christian Healing and Growth
+          Professional Support for Emotional Healing and Personal Growth
         </span>
         <div className="text-[#F5F7FA] sm:max-w-sm lg:max-w-[700px] text-center mx-auto font-medium text-base my-4 md:text-2xl">
           <p className="">
-            Begin your journey today towards spiritual growth, deeper
+            Begin your journey today toward greater clarity, stronger
             relationships, and lasting inner peace.
           </p>
           <div className="mt-2 flex flex-col justify-center align-center text-center">
@@ -47,20 +53,7 @@ export default function Hero() {
         </div>
         <div></div>
         <div className="flex items-center mb-2 justify-self-center ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="gold"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-star h-4 w-4"
-          >
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
+          <Star className="w-4 h-4 fill-yellow-400" />
           <p className="ml-1 text-sm font-bold text-[#F5F7FA]">Top Rated</p>
           <span className="text-sm text-gray-300"></span>
           <span className="w-1 h-1 mx-1.5 bg-gray-300 rounded-full "></span>
@@ -68,7 +61,7 @@ export default function Hero() {
             className="text-xs font-bold text-[#F5F7FA] underline hover:no-underline "
             href="#aboutUs"
           >
-            40+ Years Experience
+            8+ Years Experience
           </a>
           <span className="w-1 h-1 mx-1.5 bg-gray-300 rounded-full "></span>
           <a
@@ -85,7 +78,7 @@ export default function Hero() {
             Media Mentions
           </a>
         </div>
-        <a target="__blank" className="mt-4 block w-fit mx-auto" href="/book">
+        <a className="mt-4 block w-fit mx-auto" href="#contact">
           <button
             className="group relative inline-flex h-11 p-6 items-center justify-center cursor-pointer rounded-xl border-0 font-medium text-lg ext-blue-900 
   outline-0 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
@@ -102,24 +95,7 @@ export default function Hero() {
   text-blue-900
 "
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-sparkles text-blue-900 w-5 h-5 mr-2"
-            >
-              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-              <path d="M20 3v4"></path>
-              <path d="M22 5h-4"></path>
-              <path d="M4 17v2"></path>
-              <path d="M5 18H3"></path>
-            </svg>
+            <Sparkles className="w-5 h-5 text-blue-900 mr-2" />
             Start Healing Today
           </button>
         </a>
